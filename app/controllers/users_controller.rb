@@ -5,7 +5,7 @@ class Users < ApplicationController
 	end
 
 	def create
-		new_user = User.new
+		
 	end
 
 end
