@@ -15,7 +15,7 @@ get '/articles/:id' => 'articles#view'                              #shows a spe
 
 get '/pending' => 'p_articles#index'                                #landing admin page (shows all pending articles)
 post '/pending/create' => 'p_articles#create'                       #post that accepts a pending
-post '/pending/destory' => 'p_articles#destroy'                     #post that accepts a pending
+post '/pending/destroy' => 'p_articles#destroy'                     #post that accepts a pending
 
 post '/article/:id/comment' => 'comment#create'                     #post to post a comment to article :id
 post '/article/:id/comments/:id/subcomment' => 'subcomment#create'  #post to post a subcomment to a comment
