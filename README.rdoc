@@ -1,4 +1,5 @@
 == NOTES
 
 masonry layout - http://designshack.net/articles/css/masonry/ 
+
 reddit api - www.reddit.com/dev/api
