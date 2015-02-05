@@ -52,11 +52,11 @@ window.onload = function(){
 			data: whattopost
 		})//close ajax call
 
-		$.ajax({	//ajax post to remove accepted article from pending...
-			url: 'pending/destroy',
-			type: 'POST',
-			data: idtokill
-		})//close ajax call
+		// $.ajax({	//ajax post to remove accepted article from pending...
+		// 	url: 'pending/destroy',
+		// 	type: 'POST',
+		// 	data: idtokill
+		// })//close ajax call
 	})//close on click function 
 
 
