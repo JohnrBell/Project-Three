@@ -10,6 +10,7 @@ post '/session/create' => 'sessions#create'                         #post to sta
 post '/session/destroy' => 'sessions#destroy'                       #post to end a session at logout
 
 get '/articles' => 'articles#index'                                 #landing page (shows all articles)
+post '/articles/create' => 'articles#create'                        #post a pending article to articles
 get '/articles/:id' => 'articles#view'                              #shows a specific article and its comments
 
 get '/pending' => 'p_articles#index'                                #landing admin page (shows all pending articles)
