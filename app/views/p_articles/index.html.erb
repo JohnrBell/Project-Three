@@ -1,0 +1,19 @@
+<h2>Pending Articles Landing Page</h2>
+
+<button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
+
+<hr>
+
+<% pending.each do |article| %>
+<span>
+	<%= article.id %>
+	<img src="<%= article.img_url %>" width="300"><br>
+	<%= article.title %><br>
+	<input name='title' value='<%= article.title %>'>
+	<input name='img_url' value='<%= article.img_url %>'><br>
+
+	<button id="yes" data-pic-id="<%= article.id %>">Yup.</button> 
+	<button id="kill" data-pic-id="<%= article.id %>">Nope.</button>
+	<br><br>
+</span>
+<% end %>
