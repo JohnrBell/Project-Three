@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+
+
+root 'users#index'
+
+get '/users/new' => 'users#new'                                     #gets 'create new user' view
+post '/users/create' => 'users#create'                              #post to create a new user
+
+post '/session/create' => 'sessions#create'                         #post to start a session at login 
+post '/session/destroy' => 'sessions#destroy'                       #post to end a session at logout
+
+get '/articles' => 'articles#index'                                 #landing page (shows all articles)
+get '/articles/:id' => 'articles#view'                              #shows a specific article and its comments
+
+get '/pending' => 'p_articles#index'                                #landing admin page (shows all pending articles)
+post '/pending/create' => 'p_articles#create'                       #post that accepts a pending
+post '/pending/destory' => 'p_articles#destroy'                     #post that accepts a pending
+
+post '/article/:id/comment' => 'comment#create'                     #post to post a comment to article :id
+post '/article/:id/comments/:id/subcomment' => 'subcomment#create'  #post to post a subcomment to a comment
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
