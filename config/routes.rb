@@ -17,8 +17,8 @@ get '/pending' => 'p_articles#index'                                #landing adm
 post '/pending/create' => 'p_articles#create'                       #post that accepts a pending
 post '/pending/destroy' => 'p_articles#destroy'                     #post that accepts a pending
 
-post '/article/:id/comment' => 'comments#create'                     #post to post a comment to article :id
-post '/article/:id/comments/:id/subcomment' => 'subcomments#create'  #post to post a subcomment to a comment
+post '/article/:id/comments' => 'comment#create'                     #post to post a comment to article :id
+post '/article/:id/comments/:id/subcomments' => 'subcomment#create'  #post to post a subcomment to a comment
 
 
   # The priority is based upon order of creation: first created -> highest priority.
