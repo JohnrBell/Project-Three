@@ -37,5 +37,29 @@ window.onload = function(){
 		})//close ajax call
 	})//close on click function 
 
+	$('body').on('click', '#yes' ,function(event){ //when you click the kill button
+		idtokill = {id: this.getAttribute("data-pic-id")}
+		
+		title = this.parentElement.children[3].getAttribute('value')
+		img_url = this.parentElement.children[4].getAttribute('value')
+		whattopost = {title: title, img_url: img_url}
+		
+		// debugger
+		this.parentElement.remove()
+		$.ajax({	//ajax post to add pending article to the article database...
+			url: 'articles/create',
+			type: 'POST',
+			data: whattopost
+		})//close ajax call
+
+		$.ajax({	//ajax post to remove accepted article from pending...
+			url: 'pending/destroy',
+			type: 'POST',
+			data: idtokill
+		})//close ajax call
+	})//close on click function 
+
+
+
 }//close on load function 
 
