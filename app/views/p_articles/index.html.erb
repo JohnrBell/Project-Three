@@ -3,11 +3,14 @@
 <button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
 
 <hr>
+
 <% pending.each do |article| %>
+<span>
 	<%= article.id %>
 	<img src="<%= article.img_url %>" width="300"><br>
 	<%= article.title %><br>
-	<button action="/pending/create" method="post">Yup.</button> 
-	<button action="/pending/destroy" method="post">Nope.</button>
+	<button id="yes" data-pic-id="<%= article.id %>">Yup.</button> 
+	<button id="kill" data-pic-id="<%= article.id %>">Nope.</button>
 	<br><br>
+</span>
 <% end %>
