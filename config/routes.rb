@@ -6,8 +6,8 @@ root 'users#index'
 get '/users/new' => 'users#new'                                     #gets 'create new user' view
 post '/users/create' => 'users#create'                              #post to create a new user
 
-post '/session/create' => 'sessions#create'                         #post to start a session at login 
-post '/session/destroy' => 'sessions#destroy'                       #post to end a session at logout
+post '/sessions/create' => 'sessions#create'                         #post to start a session at login 
+post '/sessions/destroy' => 'sessions#destroy'                       #post to end a session at logout
 
 get '/articles' => 'articles#index'                                 #landing page (shows all articles)
 post '/articles/create' => 'articles#create'                        #post a pending article to articles
@@ -17,8 +17,8 @@ get '/pending' => 'p_articles#index'                                #landing adm
 post '/pending/create' => 'p_articles#create'                       #post that accepts a pending
 post '/pending/destroy' => 'p_articles#destroy'                     #post that accepts a pending
 
-post '/article/:id/comments' => 'comment#create'                     #post to post a comment to article :id
-post '/article/:id/comments/:id/subcomments' => 'subcomment#create'  #post to post a subcomment to a comment
+post '/articles/:id/comments' => 'comments#create'                     #post to post a comment to article :id
+post '/articles/:id/comments/:id/subcomments' => 'subcomments#create'  #post to post a subcomment to a comment
 
 
   # The priority is based upon order of creation: first created -> highest priority.
