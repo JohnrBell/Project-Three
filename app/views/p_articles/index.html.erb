@@ -1,0 +1,13 @@
+<h2>Pending Articles Landing Page</h2>
+
+<button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
+
+<hr>
+<% pending.each do |article| %>
+	<%= article.id %>
+	<img src="<%= article.img_url %>" width="300"><br>
+	<%= article.title %><br>
+	<button action="/pending/create" method="post">Yup.</button> 
+	<button action="/pending/destroy" method="post">Nope.</button>
+	<br><br>
+<% end %>
