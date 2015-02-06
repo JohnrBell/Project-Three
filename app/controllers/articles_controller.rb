@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
 
 	def index
-		@articles = Article.all
+		if session[:user_id] != nil
+			@articles = Article.all
+		else
+			redirect_to '/'
+		end
 	end
 
 	def create
