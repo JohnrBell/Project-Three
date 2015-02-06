@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 	def create
 		binding.pry
 		# Article.create({title: params[:title], img_url: params[:img_url]})
-		render :nothing => true 
+		render :nothing => true
 	end
 
 	def view
