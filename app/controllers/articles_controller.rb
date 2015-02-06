@@ -12,6 +12,8 @@ class ArticlesController < ApplicationController
 
 	def view
 		@article = Article.find(params[:id])
+		@comments = Comment.find_by(article_id: params[:id])
+
 	end
 
 end
