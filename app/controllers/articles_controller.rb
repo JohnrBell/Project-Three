@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
 
 	def index
-		@articles = Article.all
+		if session[:user_id] != nil
+			@articles = Article.all
+		else
+			redirect_to '/'
+		end
 	end
 
 	def create
@@ -10,10 +14,14 @@ class ArticlesController < ApplicationController
 	end
 
 	def view
-		articles = Article.find_by(id: params[:id])
-		comments = Comment.where(article_id: params[:id])
-		# binding.pry
-		render(:view, { locals: { articles: articles, comments: comments} })
+		if session[:user_id] != nil
+			articles = Article.find_by(id: params[:id])
+			comments = Comment.where(article_id: params[:id])
+			# binding.pry
+			render(:view, { locals: { articles: articles, comments: comments} })
+		else
+			redirect_to '/'
+		end
 	end
 
 end

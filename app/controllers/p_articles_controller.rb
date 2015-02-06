@@ -1,8 +1,12 @@
 class PArticlesController < ApplicationController
 
 	def index
-		pending = P_Article.all
-		render(:index, { locals: { pending: pending} })
+		if session[:user_name] == 'admin'
+			pending = P_Article.all
+			render(:index, { locals: { pending: pending} })
+		else
+			render(text: 'Unauthorized', status: 401) and return true
+		end
 	end
 
 	def create
@@ -15,5 +19,6 @@ class PArticlesController < ApplicationController
 		P_Article.destroy(idtokill)
 		render :nothing => true
 	end
+
 
 end
