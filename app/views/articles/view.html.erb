@@ -32,9 +32,21 @@
 		<p id='subnameandtime'><%= x.user.name %> - <%= x.user.created_at %></p>
 		<p id='subcomment'><%= x.text %></p>
 	<% end %>
+
+	ADD A SUB COMMENT
+	
+	<form method="POST" action='/articles/<%= articles.id %>/comments/<%= comment.id %>'>
+	<input name="comment_id" type="hidden" value='<%= comment.id %>'>
+	<input name="user_id" type="hidden" value='<%= comment.user.id %>'>
+	Your subcomment:
+	 <textarea name="content" cols="80" rows="20"></textarea>
+	 <input name='authenticity_token' value='<%=form_authenticity_token() %>' type ='hidden'>
+	 <input type="submit"></input> 
+	</form>
+
 	
 <% end %>
-
+ADD A NEW COMMENT
 <form method='POST' action='/articles/<%= articles.id %>/comments'>
 	<label>Comment<br>
 	<textarea name='commentText' rows='4' cols='50'></textarea><br>
