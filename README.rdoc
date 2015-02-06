@@ -1,5 +1,6 @@
 == NOTES
 
 masonry layout - http://designshack.net/articles/css/masonry/ 
-
+tipsy hover tooltips - http://onehackoranother.com/projects/jquery/tipsy/
+imagesloader - http://imagesloaded.desandro.com/
 reddit api - www.reddit.com/dev/api

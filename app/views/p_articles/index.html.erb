@@ -6,11 +6,11 @@
 
 <% pending.each do |article| %>
 <span>
-	<%= article.id %>
+	
 	<img src="<%= article.img_url %>" width="300"><br>
 	<%= article.title %><br>
-	<input name='title' value='<%= article.title %>'>
-	<input name='img_url' value='<%= article.img_url %>'><br>
+	<input type="hidden" name='title' value='<%= article.title %>'>
+	<input type="hidden" name='img_url' value='<%= article.img_url %>'>
 
 	<button id="yes" data-pic-id="<%= article.id %>">Yup.</button> 
 	<button id="kill" data-pic-id="<%= article.id %>">Nope.</button>
