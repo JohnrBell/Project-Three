@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
 
 	def index #user login page, also has a link to sign up as a new user
+		# binding.pry
+		if session[:user_id] != nil
+			redirect_to '/articles'
+		else
+			render :index
+		end
 	end
 
 
