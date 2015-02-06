@@ -32,3 +32,38 @@ div#comments{width: 600px;
 								margin-left: 20px}
 
 #subcomment{margin-left: 20px}
+
+#header{height: 50px;
+				font-family: Helvetica;
+				font-weight: bold;
+				font-size: 1.5em}
+#header a{color: #CCCCCC;
+				text-decoration: none;}
+#header a:hover{color: #FFFFFF;
+				text-decoration: none;}
+#header a:visited{color: #CCCCCC;
+				text-decoration: none;}
+
+#logout {
+	background-color:transparent;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+	border-radius:22px;
+	border:3px solid #CCCCCC;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 23px;
+	text-decoration:none;
+}
+#logout:hover {
+	color:red;
+	border-color: #566963;
+}
+#logout:active {
+	position:relative;
+	top:1px;
+}
