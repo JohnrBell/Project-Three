@@ -35,6 +35,13 @@
 	
 <% end %>
 
+<form method='POST' action='/articles/<%= articles.id %>/comments'>
+	<label>Comment<br>
+	<textarea name='commentText' rows='4' cols='50'></textarea><br>
+	<input name='authenticity_token' value='<%=form_authenticity_token() %>' type='hidden'>
+	<button>Submit</button>
+</form>
+
 
 
 </div>
