@@ -5,9 +5,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		binding.pry
-		# Article.create({title: params[:title], img_url: params[:img_url]})
-		render :nothing => true 
+		Article.create({title: params[:title], img_url: params[:img_url]})
+		redirect_to '/articles'
 	end
 
 	def view
