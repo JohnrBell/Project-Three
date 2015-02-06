@@ -1,11 +1,14 @@
 <h1>Check Out the Articles of the Day</h1>
+	<div id="container" class="js-masonry">
+	<% @articles.each do |article| %>
+		<div id='artimg'><img src="<%= article.img_url %>" width="300px"></div>
+	<% end %>
+</div>
 
-<% @articles.each do |article| %>
-<h2>
-<a href="/articles/<%= article.id %>"><%= article.title %>
-
-</h2>
-
-<h3><%= article.img_url %></h3>
-
-<% end %>
+<script type="text/javascript">
+	var container = document.querySelector('#container');
+	var msnry;
+	imagesLoaded( container, function() {
+	  msnry = new Masonry( container );
+	});
+</script>

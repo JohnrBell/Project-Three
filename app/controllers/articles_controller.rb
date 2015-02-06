@@ -5,8 +5,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		binding.pry
-		# Article.create({title: params[:title], img_url: params[:img_url]})
+		# binding.pry
+		Article.create({title: params[:title], img_url: params[:img_url]})
 		render :nothing => true
 	end
 
