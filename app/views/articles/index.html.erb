@@ -1,7 +1,10 @@
-<h1>Check Out the Articles of the Day</h1>
 	<div id="container" class="js-masonry">
 	<% @articles.each do |article| %>
-		<div id='artimg'><img src="<%= article.img_url %>" width="300px"></div>
+		<div id='artimg'>
+		<a class='imglink' href='/articles/<%= article.id %>' original-title="<%= article.title %>">
+		<img src="<%= article.img_url %>" width="350px">
+		</a>
+		</div>
 	<% end %>
 </div>
 
@@ -10,5 +13,7 @@
 	var msnry;
 	imagesLoaded( container, function() {
 	  msnry = new Masonry( container );
+		$('.imglink').tipsy({gravity: 's'});
 	});
 </script>
+
