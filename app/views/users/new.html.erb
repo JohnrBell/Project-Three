@@ -3,13 +3,22 @@
 	<title></title>
 </head>
 <body>
-	<form method='POST' action='/users'>
+
+	<% if @error %>
+	<h1 style='color:red;'>Nice try Niels</h1>
+	<% end %>
+
+	<h2>Sign Up</h2>
+	<form method='POST' action='/users/create'>
 		<label>Name
 			<input type='text' name='name' />
 		<label>Email
 			<input type='text' name='email' />
 		<label>Password
 			<input type='text' name='password' />
+
+			<input name='authenticity_token' value='<%= form_authenticity_token() %>' type='hidden'>
+
 		<button>Sign Up</button>
 	</form>
 </body>
