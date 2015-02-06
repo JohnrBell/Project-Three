@@ -5,15 +5,15 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		# binding.pry
 		Article.create({title: params[:title], img_url: params[:img_url]})
 		render :nothing => true
 	end
 
 	def view
-		@article = Article.find(params[:id])
-		@comments = Comment.find_by(article_id: params[:id])
-
+		articles = Article.find_by(id: params[:id])
+		comments = Comment.where(article_id: params[:id])
+		# binding.pry
+		render(:view, { locals: { articles: articles, comments: comments} })
 	end
 
 end

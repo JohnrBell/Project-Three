@@ -1,5 +1,13 @@
 == NOTES
 
-masonry layout - http://designshack.net/articles/css/masonry/ 
+masonry layout - http://masonry.desandro.com/index.html
+allows the free flowing layout which is responsive and damn pretty. 
+
+tipsy hover tooltips - http://onehackoranother.com/projects/jquery/tipsy/
+adds the divs with text on the image hover instance
+
+imagesloader - http://imagesloaded.desandro.com/
+allows you to write javascript that executs AFTER all images have loaded into the page
 
 reddit api - www.reddit.com/dev/api
+reddit's api... simple enough

@@ -1,10 +1,23 @@
 <!-- this button is just a yo button. It does nothing. -->
-<button>yo</button>
+<center>
+<h2><%= articles.title %></h2>
+<img src="<%= articles.img_url %>" width=600px/>
+<br><br>
+<div id="comments">
+<% comments.each do |comment| %>
+	<p id='nameandtime'><%= comment.user.name %> - <%= comment.user.created_at %></p>
+	<%= comment.text %>
+	<br><br>
+	
+	<% comment.subcomments.each do |x| %>
+		<p id='subnameandtime'><%= x.user.name %> - <%= x.user.created_at %></p>
+		<p id='subcomment'><%= x.text %></p>
+	<% end %>
+	
+<% end %>
 
-<h2><%= @article.title %></h2>
 
-<h3><img src="<%= @article.img_url %>" /></h3>
 
+</div>
+</center>
 <br>
-
-<h4> <%= @comments.text %>

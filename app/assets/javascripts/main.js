@@ -4,7 +4,7 @@ window.onload = function(){
 
 	$('#getredditposts').on('click', function(event){ //when you click the get reddit posts button
 		$.ajax({	//ajax request to reddit api to get top space posts from today
-			url: 'http://www.reddit.com/r/space/top.json?t=day',
+			url: 'http://www.reddit.com/r/space/top.json?t=year',
 			type: 'GET',
 			dataType: 'json'
 		}).done(function(results){
@@ -52,11 +52,11 @@ window.onload = function(){
 			data: whattopost
 		})//close ajax call
 
-		// $.ajax({	//ajax post to remove accepted article from pending...
-		// 	url: 'pending/destroy',
-		// 	type: 'POST',
-		// 	data: idtokill
-		// })//close ajax call
+		$.ajax({	//ajax post to remove accepted article from pending...
+			url: 'pending/destroy',
+			type: 'POST',
+			data: idtokill
+		})//close ajax call
 	})//close on click function 
 
 
