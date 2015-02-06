@@ -4,7 +4,7 @@ window.onload = function(){
 
 	$('#getredditposts').on('click', function(event){ //when you click the get reddit posts button
 		$.ajax({	//ajax request to reddit api to get top space posts from today
-			url: 'http://www.reddit.com/r/space/top.json?t=week',
+			url: 'http://www.reddit.com/r/space/top.json?t=year',
 			type: 'GET',
 			dataType: 'json'
 		}).done(function(results){

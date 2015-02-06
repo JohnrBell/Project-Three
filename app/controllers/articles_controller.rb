@@ -10,9 +10,10 @@ class ArticlesController < ApplicationController
 	end
 
 	def view
-		@article = Article.find(params[:id])
-		@comments = Comment.find_by(article_id: params[:id])
-
+		articles = Article.find_by(id: params[:id])
+		comments = Comment.where(article_id: params[:id])
+		# binding.pry
+		render(:view, { locals: { articles: articles, comments: comments} })
 	end
 
 end

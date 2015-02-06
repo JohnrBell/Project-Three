@@ -14,8 +14,21 @@
  *= require_self
  */
 body {background-color: #222222;
+			font-family: Helvetica;
 			color: #CCCCCC;
 			margin-left: 0px;
 			margin-top: 5px}
 
 #artimg img{margin-left: 5px}
+
+div#comments{width: 600px;
+						text-align: left;
+						padding-bottom: 10px;
+						border-bottom: 1px #cccccc solid}
+
+#nameandtime{font-size: .75em}
+
+#subnameandtime{font-size: .75em;
+								margin-left: 20px}
+
+#subcomment{margin-left: 20px}
