@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params["password"]) #if user email exists, and password is legit
 			session[:user_id] = user.id #sets the session hash user_id to user.id
+			session[:user_name] = user.name
 			if user.email == "admin@admin.com"
 				redirect_to '/pending'
 			else
