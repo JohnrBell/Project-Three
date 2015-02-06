@@ -13,9 +13,9 @@ class UsersController < ApplicationController
 			@error = true
 			render :new
 		else
-		new_user = User.new({name: params["name"], email: params["email"], password: params[:password]})
-		new_user.save
-		redirect_to '/articles'
+			new_user = User.new({name: params["name"], email: params["email"], password: params[:password]})
+			new_user.save
+			redirect_to '/articles'
 		end
  	end
 
