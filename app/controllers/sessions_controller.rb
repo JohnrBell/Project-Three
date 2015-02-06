@@ -1,14 +1,18 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 
 	def create #creates new 'session' when existing user wants to login
-		user = User.find_by(email: [params["email"]) #checks the database for user email
+		user = User.find_by(email: params["email"]) #checks the database for user email
 
 		if user && user.authenticate(params["password"]) #if user email exists, and password is legit
 			session[:user_id] = user.id #sets the session hash user_id to user.id
-			redirect_to '/articles' #redirects user to article page for image overload
+			if user.email == "admin@admin.com"
+				redirect_to '/pending'
+			else
+				redirect_to '/articles' #redirects user to article page for image overload
+			end
 		else
 			@error = true
-			render :new
+			render "users/index"
 		end
 	end
 
