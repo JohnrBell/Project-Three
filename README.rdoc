@@ -11,3 +11,6 @@ allows you to write javascript that executs AFTER all images have loaded into th
 
 reddit api - www.reddit.com/dev/api
 reddit's api... simple enough
+
+http://codepen.io/apsolut/pen/EhmeL
+used this codepen to build the stary sky on the index
