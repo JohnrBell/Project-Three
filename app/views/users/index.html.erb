@@ -3,22 +3,38 @@
 	<title></title>
 </head>
 <body>
+
+<div id="backg">
+<img src='http://i.imgur.com/0JCPxKP.jpg'>
+</div>
+
+<div id='loginform'>
+	<center>
 	<% if @error %>
 	<h1 style='color:red;'>Incorrect email and/or password</h1>
 	<% end %>
-	<h1>Welcome to the super duper awesome website by John, Mina, Tania and Umer. Don't break anything</h1>
+	<p id="hometitle">Welcome<br> to <br> SPACEGRID</p>
 
-	<form method='POST' action='/sessions/create'>
-		<label>Email
-			<input type='text' name='email'>
-		<label>Password
-			<input type='password' name='password'>
+	<div class="login">
+    <form method='POST' action='/sessions/create'>
+    	<input class='inputbox' type="text" name="email" placeholder="Username" required="required" />
+        <input class='inputbox' type="password" name="password" placeholder="Password" required="required" />
+        <input name='authenticity_token' value='<%= form_authenticity_token() %>' type='hidden'>
+        <button type="submit" id="loginbutton">Blast Off.</button>
+        
+    </form>
+	</div>
 
-			<input name='authenticity_token' value='<%form_authenticity_token()%>' type='hidden'>
-
-			<button>Login</button>
-
-			<p>If you would like to sign up, click <a href='/users/new'>here</a></p>
+	<form method='GET' action='/users/new'>
+	<button id='signup'>New User?</button>			
 	</form>
+
+	</center>
+</div>
+
+
+
+
+
 </body>
 </html>
