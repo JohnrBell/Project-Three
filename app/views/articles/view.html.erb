@@ -13,35 +13,35 @@
 	</td>
 	<td width=20 align="right">
 	</td>
-	
 </tr></table>
 </div>
 
-<!-- this button is just a yo button. It does nothing. -->
+
 <center>
 <a href='<%= articles.img_url %>'><img src="<%= articles.img_url %>" width=600px/></a>
 <h2><%= articles.title %></h2>
 <br><br>
 <div id="comments">
+
+<div id='individual_comment'>
 <% comments.each do |comment| %>
-	<p id='nameandtime'><%= comment.user.name %> - <%= comment.user.created_at %></p>
+	<p id='nameandtime'><%= comment.user.name %> - <%= comment.created_at %></p>
 	<p id='commenttext'><%= comment.text %></p>
 	
 	<span>
 	<button id='showsub'>Add A SubComment</button>
-	<div id='subform' style="display:none">
-	<form method="POST" action='/articles/<%= articles.id %>/comments/<%= comment.id %>/subcomments'>
-	<input name="comment_id" type="hidden" value='<%= comment.id %>'>
-	<input name="user_id" type="hidden" value='<%= comment.user.id %>'>
-	Your subcomment:
-	 <textarea name="content" rows='4' cols='95'></textarea>
-	 <input name='authenticity_token' value='<%=form_authenticity_token() %>' type ='hidden'>
-	 <br>
-	 <button id='submit'>Submit</button>
-	</form>
-	</div>
+		<div id='subform' style="display:none">
+			<form method="POST" action='/articles/<%= articles.id %>/comments/<%= comment.id %>/subcomments'>
+				<input name="comment_id" type="hidden" value='<%= comment.id %>'>
+				<input name="user_id" type="hidden" value='<%= comment.user.id %>'>
+				Your subcomment:
+				<textarea name="content" rows='4' cols='95'></textarea>
+				<input name='authenticity_token' value='<%=form_authenticity_token() %>' type ='hidden'>
+				<br>
+				<button id='submit'>Submit</button>
+			</form>
+		</div>
 	</span>
-
 
 	<% comment.subcomments.each do |x| %>
 		<p id='subnameandtime'><%= x.user.name %> - <%= x.user.created_at %></p>
@@ -49,6 +49,10 @@
 	<% end %>
 	<br><br>
 <% end %>
+</div>
+
+
+
 
 <br><br>
 <form method='POST' action='/articles/<%= articles.id %>/comments'>
@@ -63,3 +67,4 @@
 </div>
 </center>
 <br>
+
