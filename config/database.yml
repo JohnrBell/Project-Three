@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Project3_production
-  username: Project3
-  password: <%= ENV['PROJECT3_DATABASE_PASSWORD'] %>
+  database: postgres://ujsqwqjxengdng:l-ZRl9vB5Qmhdpg4n9MUcgJS6f@ec2-23-21-154-37.compute-1.amazonaws.com:5432/deehv5jbrb4io9
+  username: ujsqwqjxengdng
+  password: l-ZRl9vB5Qmhdpg4n9MUcgJS6f
