@@ -83,5 +83,3 @@ production:
   database: Project3_production
   username: Project3
   password: <%= ENV['PROJECT3_DATABASE_PASSWORD'] %>
-
-
