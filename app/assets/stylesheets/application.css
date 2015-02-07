@@ -14,27 +14,40 @@
  *= require_self
  */
 body {background-color: #222222;
-			font-family: Helvetica;
+			font-family: Avenir;
 			color: #CCCCCC;
 			margin-left: 0px;
-			margin-top: 5px}
+			margin-top: 0px}
 
 #artimg img{margin-left: 5px}
 
+
+
+
+
 div#comments{width: 600px;
 						text-align: left;
-						padding-bottom: 10px;
-						border-bottom: 1px #cccccc solid}
+						padding-bottom: 10px;}
+#nameandtime{font-size: .70em;
+						font-style: italic;
+						line-height: .1;
+						color: #CCCCCC}
+#commenttext{padding-bottom: 10px;
+						border-bottom: 1px red solid}
+#subnameandtime{font-size: .70em;
+							font-style: italic;
+							line-height: .1;
+							padding-top: 10px;
+							color: #CCCCCC;
+							margin-left: 40px}
+#subcomment{margin-left: 40px;
+						border-bottom: 1px red solid}
 
-#nameandtime{font-size: .75em}
 
-#subnameandtime{font-size: .75em;
-								margin-left: 20px}
 
-#subcomment{margin-left: 20px}
 
 #header{height: 50px;
-				font-family: Helvetica;
+				font-family: Avenir;
 				font-weight: bold;
 				font-size: 1.5em}
 #header a{color: #CCCCCC;
@@ -44,7 +57,10 @@ div#comments{width: 600px;
 #header a:visited{color: #CCCCCC;
 				text-decoration: none;}
 
-#logout {
+
+
+
+#logout, #submit, #showsub {
 	background-color:transparent;
 	-moz-border-radius:22px;
 	-webkit-border-radius:22px;
@@ -53,17 +69,17 @@ div#comments{width: 600px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:arial;
+	font-family:Avenir;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 23px;
 	text-decoration:none;
 }
-#logout:hover {
+#logout:hover, #submit:hover, #showsub:hover {
 	color:red;
 	border-color: #566963;
 }
-#logout:active {
+#logout:active, #submit:active, #showsub:active {
 	position:relative;
 	top:1px;
 }

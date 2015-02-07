@@ -4,7 +4,7 @@ window.onload = function(){
 
 	$('#getredditposts').on('click', function(event){ //when you click the get reddit posts button
 		$.ajax({	//ajax request to reddit api to get top space posts from today
-			url: 'http://www.reddit.com/r/space/top.json?t=year',
+			url: 'http://www.reddit.com/r/space/top.json?t=day',
 			type: 'GET',
 			dataType: 'json'
 		}).done(function(results){
@@ -60,6 +60,22 @@ window.onload = function(){
 	})//close on click function 
 
 
+	$('body').on('click', '#showsub' ,function(event){ //when you click the kill button
+		
+		toggle_visibility(this.parentElement.children[1])
+	})
+
+
+    function toggle_visibility(id) {
+       var e = (id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
 
 }//close on load function 
+
+
+
 
