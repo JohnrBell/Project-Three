@@ -13,54 +13,65 @@
  *= require_tree .
  *= require_self
  */
-body {background-color: #222222;
-			font-family: Avenir;
-			color: #CCCCCC;
-			margin-left: 0px;
-			margin-top: 0px}
+body {
+	background-color: #222222;
+	font-family: Avenir;
+	color: #CCCCCC;
+	margin-left: 0px;
+	margin-top: 0px}
 
-#artimg img{margin-left: 5px}
-
-
-
-
-
-div#comments{width: 600px;
-						text-align: left;
-						padding-bottom: 10px;}
-#nameandtime{font-size: .70em;
-						font-style: italic;
-						line-height: .1;
-						color: #CCCCCC}
-#commenttext{padding-bottom: 10px;
-						border-bottom: 1px red solid}
-#subnameandtime{font-size: .70em;
-							font-style: italic;
-							line-height: .1;
-							padding-top: 10px;
-							color: #CCCCCC;
-							margin-left: 40px}
-#subcomment{margin-left: 40px;
-						border-bottom: 1px red solid}
+#artimg img{
+	margin-left: 5px}
 
 
 
 
-#header{height: 50px;
-				font-family: Avenir;
-				font-weight: bold;
-				font-size: 1.5em}
-#header a{color: #CCCCCC;
-				text-decoration: none;}
-#header a:hover{color: #FFFFFF;
-				text-decoration: none;}
-#header a:visited{color: #CCCCCC;
-				text-decoration: none;}
+
+div#comments{
+	width: 600px;
+	text-align: left;
+	padding-bottom: 10px;}
+#nameandtime{
+	font-size: .70em;
+	font-style: italic;
+	line-height: .1;
+	color: #CCCCCC}
+#commenttext{
+	padding-bottom: 10px;
+	border-bottom: 1px red solid}
+#subnameandtime{
+	font-size: .70em;
+	font-style: italic;
+	line-height: .1;
+	padding-top: 10px;
+	color: #CCCCCC;
+	margin-left: 40px}
+#subcomment{
+	margin-left: 40px;
+	border-bottom: 1px red solid}
 
 
 
 
-#logout, #submit, #showsub {
+#header{
+	height: 50px;
+	font-family: Avenir;
+	font-weight: bold;
+	font-size: 1.5em}
+#header a{
+	color: #CCCCCC;
+	text-decoration: none;}
+#header a:hover{
+	color: #FFFFFF;
+	text-decoration: none;}
+#header a:visited{
+	color: #CCCCCC;
+	text-decoration: none;}
+
+
+
+
+#logout, #submit, #showsub, #signup, #loginbutton {
 	background-color:transparent;
 	-moz-border-radius:22px;
 	-webkit-border-radius:22px;
@@ -75,11 +86,62 @@ div#comments{width: 600px;
 	padding:6px 23px;
 	text-decoration:none;
 }
-#logout:hover, #submit:hover, #showsub:hover {
+#logout:hover, #submit:hover, #showsub:hover, #signup:hover, #loginbutton:hover {
 	color:red;
 	border-color: #566963;
 }
-#logout:active, #submit:active, #showsub:active {
+#logout:active, #submit:active, #showsub:active, #signup:active, #loginbutton:active {
 	position:relative;
 	top:1px;
 }
+
+
+#login {
+	height: 600px;
+	width: 370px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
+}
+
+#hometitle{
+	font-size: 50px;
+	font-weight: bold;
+}
+
+
+#backg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  opacity: .4}
+
+#backg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;}
+
+
+.login { 
+	width: 375px;
+	height:200px;}
+
+.inputbox { 
+  border: none;
+  outline: none;
+	width: 350px; 
+	margin-bottom: 10px; 
+	padding: 10px;
+	font-size: 13px;
+	border: 1px solid rgba(0,0,0,0.3);
+	background: rgba(255,255,255,.5);
+	border-radius: 10px;}
