@@ -20,16 +20,18 @@ body {
 	font-family: Dosis;
 	color: #CCCCCC;
 	margin-left: 0px;
+	margin-right: 0px;
 	margin-top: 0px}
-
 #artimg img{
 	margin-left: 5px}
 
 
 div#comments{
-	width: 600px;
-	text-align: left;
-	padding-bottom: 0px;}
+	padding: 20px;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 10px;
+	width: 550px;
+	text-align: left;}
 #nameandtime{
 	font-size: .80em;
 	font-style: italic;
@@ -38,6 +40,7 @@ div#comments{
 #commenttext{
 	padding-bottom: 10px;
 	border-bottom: 1px red solid}
+
 
 
 #subnameandtime{
@@ -54,10 +57,12 @@ div#comments{
 
 
 #header{
+	background-color: rgba(0,0,0,.5);
 	height: 70px;
 	font-family: Dosis;
 	font-weight: bold;
-	font-size: 1.5em}
+	font-size: 1.5em;
+	margin-bottom: 5px}
 #header a{
 	color: #CCCCCC;
 	text-decoration: underline;}
@@ -146,7 +151,7 @@ button:active {
 textarea { 
   border: none;
   outline: none;
-	width: 580px; 
+	width: 530px; 
 	margin-bottom: 10px; 
 	padding: 10px;
 	font-size: 13px;
