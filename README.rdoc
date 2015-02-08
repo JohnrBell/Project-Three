@@ -1,22 +1,48 @@
-== NOTES
+
+== Description
+
+	A Automatic Content Gathering System, Utilizing Reddit's API.
+
+
+== Team
+
+	John Bell
+
+	Mina Talai
+
+	Umer Dar
+
+	Tania Turzer
+
+
+== Technologies User
 
 masonry layout - http://masonry.desandro.com/index.html
+
 allows the free flowing layout which is responsive and damn pretty. 
 
-tipsy hover tooltips - http://onehackoranother.com/projects/jquery/tipsy/
-adds the divs with text on the image hover instance
-
 imagesloader - http://imagesloaded.desandro.com/
+
 allows you to write javascript that executs AFTER all images have loaded into the page
 
 reddit api - www.reddit.com/dev/api
+
 reddit's api... simple enough
 
 http://codepen.io/apsolut/pen/EhmeL
+
 used this codepen to build the stary sky on the index
 
 https://github.com/janl/mustache.js
+
 used mustache for templating things that are appended to the dom 
 
 http://codepen.io/CasperPas/pen/erJKE
+
 simple css to make the loading ring animation. 
+
+
+== Our Trello (Contains Artifacts & Wireframes & ERDs)
+
+https://trello.com/b/4PvAmoIH/team-meowth
+
