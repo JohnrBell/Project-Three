@@ -9,12 +9,18 @@
 		</td>
 		<td width=50%>
 			Welcome to <a href='/articles'>SpaceGrid</a>, <%= session[:user_name] %>
+
+			<% if session[:user_name] == 'admin' %>
+			- <a href='/pending'>See Pending Articles</a>
+			<%end%>
 		</td>
 		<td width=0% align="right">
+			
 			<form action='/sessions/destroy' method="POST">
 			<button id="logout">Log Out</button>
 			<input name='authenticity_token' value='<%=form_authenticity_token() %>' type='hidden'>
 			</form>
+
 		</td>
 		<td width=20 align="right">
 		</td>
