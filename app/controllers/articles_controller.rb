@@ -24,4 +24,10 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def destroy
+		idtokill = params[:id].to_i
+		Article.destroy(idtokill)
+		render :nothing => true
+	end
+
 end

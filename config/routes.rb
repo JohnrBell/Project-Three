@@ -12,6 +12,8 @@ post '/sessions/destroy' => 'sessions#destroy'                       #post to en
 get '/articles' => 'articles#index'                                 #landing page (shows all articles)
 post '/articles/create' => 'articles#create'                        #post a pending article to articles
 get '/articles/:id' => 'articles#view'                              #shows a specific article and its comments
+post '/articles/destroy' => 'articles#destroy'                     #deletes accepted articles
+
 
 get '/pending' => 'p_articles#index'                                #landing admin page (shows all pending articles)
 post '/pending/create' => 'p_articles#create'                       #post that accepts a pending
