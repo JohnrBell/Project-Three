@@ -1,7 +1,7 @@
 
 == Description
 
-	A Automatic Content Gathering System, Utilizing Reddit's API.
+	An Automatic Content Gathering System, Utilizing Reddit's API.
 
 
 == Team
@@ -19,27 +19,27 @@
 
 masonry layout - http://masonry.desandro.com/index.html
 
-allows the free flowing layout which is responsive and damn pretty. 
+	-allows the free flowing layout which is responsive and damn pretty. 
 
 imagesloader - http://imagesloaded.desandro.com/
 
-allows you to write javascript that executs AFTER all images have loaded into the page
+	-allows you to write javascript that executs AFTER all images have loaded into the page
 
 reddit api - www.reddit.com/dev/api
 
-reddit's api... simple enough
+	-reddit's api... simple enough
 
 http://codepen.io/apsolut/pen/EhmeL
 
-used this codepen to build the stary sky on the index
+	-used this codepen to build the stary sky on the index
 
 https://github.com/janl/mustache.js
 
-used mustache for templating things that are appended to the dom 
+	-used mustache for templating things that are appended to the dom 
 
 http://codepen.io/CasperPas/pen/erJKE
 
-simple css to make the loading ring animation. 
+	-simple css to make the loading ring animation. 
 
 
 == Our Trello (Contains Artifacts & Wireframes & ERDs)
