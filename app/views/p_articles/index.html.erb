@@ -2,8 +2,14 @@
 
 <button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
 
+<a href='/articles'>Go To Articles Page</a>
+
 <hr>
 
+<table>
+<tr>
+<td width=50% valign=top>
+<h3>Pending Articles</h3>
 <% pending.each do |article| %>
 <span>
 	
@@ -17,3 +23,27 @@
 	<br><br>
 </span>
 <% end %>
+</td>
+<td width=50% valign=top>
+<h3>Accepted Articles</h3>
+<div id='acceptedArticles'>
+	<% accepted_articles.each do |accepted_article| %>
+	<span>
+		<img src="<%= accepted_article.img_url %>" width='300'><br>
+		<%= accepted_article.title %>
+		<input type="hidden" name='title' value='<%= accepted_article.title %>'>
+		<input type="hidden" name='img_url' value='<%= accepted_article.img_url %>'>
+
+		<button id="killDuplicate" data-pic-id="<%= accepted_article.id %>">Nope.</button>
+
+		<br><br>
+	</span>
+	<% end %>
+</div>
+</td>
+</tr>
+</table>
+
+
+
+

@@ -3,7 +3,8 @@ class PArticlesController < ApplicationController
 	def index
 		if session[:user_name] == 'admin'
 			pending = P_Article.all
-			render(:index, { locals: { pending: pending} })
+			accepted_articles = Article.all
+			render(:index, { locals: { pending: pending, accepted_articles: accepted_articles} })
 		else
 			render(text: 'Unauthorized', status: 401) and return true
 		end

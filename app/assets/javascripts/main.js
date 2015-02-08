@@ -41,6 +41,8 @@ window.onload = function(){
 			type: 'POST',
 			data: idtokill
 		})//close ajax call
+		location.reload();
+
 	})//close on click function 
 
 
@@ -53,7 +55,20 @@ window.onload = function(){
 			type: 'POST',
 			data: idtokill
 		})//close ajax call
-	})//close on click function 
+	})//close on click function
+
+
+	$('body').on('click', '#killDuplicate' ,function(event){ //when you click the kill button
+		idtokill = {id: this.getAttribute("data-pic-id")}
+		this.parentElement.remove()
+
+		$.ajax({	//ajax post to add pending articles to the database...
+			url: 'articles/destroy',
+			type: 'POST',
+			data: idtokill
+		})//close ajax call
+	})//close on click function  
+
 
 
 	$('body').on('click', '#showsub' ,function(event){ //when you click the show subcomment form button
@@ -67,10 +82,6 @@ window.onload = function(){
      else
         e.style.display = 'block';
   }
-
-
-
-
 }//close on load function 
 
 
