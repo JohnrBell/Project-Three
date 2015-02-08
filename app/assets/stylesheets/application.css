@@ -22,6 +22,16 @@ body {
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px}
+
+a{  color: #CCCCCC;
+    text-decoration: underline;}
+a:hover{
+    color: #FFFFFF;
+    text-decoration: none;}
+a:visited{
+    color: #CCCCCC;
+    text-decoration: none;}
+
 #artimg img{
 	margin-left: 10px;
 	margin-bottom: 5px}
@@ -170,20 +180,23 @@ textarea {
   bottom: 0;
   margin: auto;}
 
+
+
+
 .imgTitle{
 	position: absolute;
 	top: 10%;
-	background-color: rgba(255,255,255,.4);
+
 	width: 250px;
 	margin-left: 15px;
 	margin-bottom: -20px;
 	padding: 5px;
 	border-bottom: rgba(0,0,0,.5) 2px solid;
 	border-top: rgba(0,0,0,.5) 2px solid;
-	border-right: rgba(200,0,0,.5) 5px solid;
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
-	box-shadow: 2px 0px 10px #888888;}
+	box-shadow: 2px 0px 10px #888888;
+    visibility: hidden}
 .imgTitle:hover{
 	background-color: rgba(255,255,255,1);
 	border-right: rgba(200,0,0,1) 5px solid;
@@ -191,7 +204,9 @@ textarea {
 #artimg:hover .imgTitle{
 	background-color: rgba(255,255,255,1);
 	border-right: rgba(200,0,0,1) 5px solid;
+    visibility: visible;
 }
+
 .imgTitle a{
 	color: #000000;
 	text-decoration: none;
@@ -208,6 +223,8 @@ textarea {
 	color: #000000;
 	text-decoration: none;
 }
+
+
 
 #artimg img{
 	border-radius: 10px;

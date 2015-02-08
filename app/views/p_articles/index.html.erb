@@ -1,15 +1,20 @@
 <h2>Pending Articles Landing Page</h2>
-
-<button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
-
-<a href='/articles'>Go To Articles Page</a>
-
 <hr>
 
 <table>
 <tr>
 <td width=50% valign=top>
 <h3>Pending Articles</h3>
+<table width=400px>
+	<tr>
+		<td>
+			<button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
+		</td>
+		<td>
+			<a href='/articles'>Go To Articles Page</a>
+		</td>
+	</tr>
+</table>
 <% pending.each do |article| %>
 <span>
 	
