@@ -29,6 +29,7 @@
 			<a class='imglink' href='/articles/<%= article.id %>' original-title="<%= article.title %>">
 				<img src="<%= article.img_url %>" width="350px">
 			</a>
+			<div class='imgTitle'><%= article.title %></div>
 		</div>
 	<% end %>
 </div>
@@ -59,7 +60,7 @@
 	imagesLoaded( container, function() {
 		$('#loading').remove()
 	  msnry = new Masonry( container );
-		$('.imglink').tipsy({gravity: 's'});
+		// $('.imglink').tipsy({gravity: 's'});
 	});
 </script>
 
