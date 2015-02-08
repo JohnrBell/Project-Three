@@ -23,7 +23,8 @@ body {
 	margin-right: 0px;
 	margin-top: 0px}
 #artimg img{
-	margin-left: 5px}
+	margin-left: 10px;
+	margin-bottom: 5px}
 
 
 div#comments{
@@ -174,7 +175,7 @@ textarea {
 	top: 10%;
 	background-color: rgba(255,255,255,.4);
 	width: 250px;
-	margin-left: 5px;
+	margin-left: 15px;
 	margin-bottom: -20px;
 	padding: 5px;
 	border-bottom: rgba(0,0,0,.5) 2px solid;
@@ -182,7 +183,7 @@ textarea {
 	border-right: rgba(200,0,0,.5) 5px solid;
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
-	 box-shadow: 2px 0px 10px #888888;}
+	box-shadow: 2px 0px 10px #888888;}
 .imgTitle:hover{
 	background-color: rgba(255,255,255,1);
 	border-right: rgba(200,0,0,1) 5px solid;
@@ -209,7 +210,11 @@ textarea {
 }
 
 #artimg img{
-	border-radius: 10px
+	border-radius: 10px;
+	box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border: rgba(255,255,255,.4) 4px solid;
 }
 
 canvas {
@@ -218,10 +223,6 @@ canvas {
 	-khtml-opacity:0.2;
 	opacity:0.2;
 	filter:alpha(opacity=20);}
-
-
-
-
 
 
 
