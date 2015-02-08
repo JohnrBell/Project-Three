@@ -17,3 +17,6 @@ used this codepen to build the stary sky on the index
 
 https://github.com/janl/mustache.js
 used mustache for templating things that are appended to the dom 
+
+http://codepen.io/CasperPas/pen/erJKE
+simple css to make the loading ring animation. 
