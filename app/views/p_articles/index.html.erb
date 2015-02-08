@@ -5,16 +5,25 @@
 <tr>
 <td width=50% valign=top>
 <h3>Pending Articles</h3>
-<table width=400px>
+<table width=450px>
 	<tr>
 		<td>
-			<button id='getredditposts'>Poll Reddit for New Top Posts...</button> 
+			<center>
+			<button id='getredditposts'>Poll Reddit for New Top Posts...</button> <br>
+			<select id='timeframe'>
+				<option>Day</option>
+				<option>Week</option>
+				<option>Month</option>
+				<option>Year</option>
+			</select>
+			</center>
 		</td>
 		<td>
 			<a href='/articles'>Go To Articles Page</a>
 		</td>
 	</tr>
 </table>
+<br>
 <% pending.each do |article| %>
 <span>
 	

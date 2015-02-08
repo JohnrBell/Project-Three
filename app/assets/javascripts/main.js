@@ -3,8 +3,10 @@ console.log('Main.js loaded!')
 window.onload = function(){
 
 	$('#getredditposts').on('click', function(event){ //when you click the get reddit posts button
+		timeframe = $('#timeframe').val().toLowerCase()
+		url = ('http://www.reddit.com/r/space/top.json?t='+timeframe)
 		$.ajax({	//ajax request to reddit api to get top space posts from today
-			url: 'http://www.reddit.com/r/space/top.json?t=day',
+			url: url,
 			type: 'GET',
 			dataType: 'json'
 		}).done(function(results){
