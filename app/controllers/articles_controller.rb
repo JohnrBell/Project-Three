@@ -17,8 +17,7 @@ class ArticlesController < ApplicationController
 		if session[:user_id] != nil
 			articles = Article.find_by(id: params[:id])
 			comments = Comment.where(article_id: params[:id])
-			# binding.pry
-			render(:view, { locals: { articles: articles, comments: comments} })
+			render(:view, { locals: { articles: articles, comments: comments}})
 		else
 			redirect_to '/'
 		end

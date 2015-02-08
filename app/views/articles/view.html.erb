@@ -1,5 +1,5 @@
 <div id="header">
-	<table width=100% height=100%>]
+	<table width=100% height=100%>
 		<tr>
 			<td width=20 align="right">
 			</td>
@@ -18,52 +18,24 @@
 	</table>
 </div>
 
-
 <center>
-<a href='<%= articles.img_url %>'><img src="<%= articles.img_url %>" width=600px/></a>
-<h2><%= articles.title %></h2>
-<br><br>
-<div id="comments">
-
-	<div id='individual_comment'>
+	<a href='<%= articles.img_url %>'><img src="<%= articles.img_url %>" width=600px/></a>
+	<h2><%= articles.title %></h2>
+	<br><br>
+	<div id="comments">
 		<% comments.each do |comment| %>
-			<p id='nameandtime'><%= comment.user.name %> - <%= comment.created_at %></p>
+			<p id='nameandtime'><%= comment.user.name %> - <%= comment.user.created_at %></p>
 			<p id='commenttext'><%= comment.text %></p>
-			
-			<span>
-				<button id='showsub'>Add A SubComment</button>
-				<div id='subform' style="display:none">
-					<form method="POST" action='/articles/<%= articles.id %>/comments/<%= comment.id %>/subcomments'>
-						<input name="comment_id" type="hidden" value='<%= comment.id %>'>
-						<input name="user_id" type="hidden" value='<%= comment.user.id %>'>
-						Your subcomment:
-						<textarea name="content" rows='4' cols='95'></textarea>
-						<input name='authenticity_token' value='<%=form_authenticity_token() %>' type ='hidden'>
-						<br>
-						<button id='submit'>Submit</button>
-					</form>
-				</div>
-			</span>
-
-			<% comment.subcomments.each do |x| %>
-				<p id='subnameandtime'><%= x.user.name %> - <%= x.user.created_at %></p>
-				<p id='subcomment'><%= x.text %></p>
-			<% end %>
-			<br><br>
+			<br>
 		<% end %>
+		<br>
+		<form method='POST' action='/articles/<%= articles.id %>/comments'>
+			<label>Comment<br>
+			<textarea name='commentText' rows='4' cols='95'></textarea><br>
+			<input name='authenticity_token' value='<%=form_authenticity_token() %>' type='hidden'>
+			<button id='submit'>Add A Comment</button>
+		</form>
 	</div>
-
-</div>
-
-
-<br><br>
-<form method='POST' action='/articles/<%= articles.id %>/comments'>
-	<label>Comment<br>
-	<textarea name='commentText' rows='4' cols='95'></textarea><br>
-	<input name='authenticity_token' value='<%=form_authenticity_token() %>' type='hidden'>
-	<button id='submit'>Add A Comment</button>
-</form>
-
-
 </center>
 
+<a name='bottom'></a>

@@ -17,7 +17,7 @@
 
 body {
 	background-color: #222222;
-	font-family: Avenir;
+	font-family: Dosis;
 	color: #CCCCCC;
 	margin-left: 0px;
 	margin-top: 0px}
@@ -29,17 +29,19 @@ body {
 div#comments{
 	width: 600px;
 	text-align: left;
-	padding-bottom: 10px;}
+	padding-bottom: 0px;}
 #nameandtime{
-	font-size: .70em;
+	font-size: .80em;
 	font-style: italic;
 	line-height: .1;
 	color: #CCCCCC}
 #commenttext{
 	padding-bottom: 10px;
 	border-bottom: 1px red solid}
+
+
 #subnameandtime{
-	font-size: .70em;
+	font-size: .80em;
 	font-style: italic;
 	line-height: .1;
 	padding-top: 10px;
@@ -51,15 +53,14 @@ div#comments{
 
 
 
-
 #header{
 	height: 50px;
-	font-family: Avenir;
+	font-family: Dosis;
 	font-weight: bold;
 	font-size: 1.5em}
 #header a{
 	color: #CCCCCC;
-	text-decoration: none;}
+	text-decoration: underline;}
 #header a:hover{
 	color: #FFFFFF;
 	text-decoration: none;}
@@ -69,8 +70,7 @@ div#comments{
 
 
 
-
-#logout, #submit, #showsub, #signup, #loginbutton {
+button {
 	background-color:transparent;
 	-moz-border-radius:22px;
 	-webkit-border-radius:22px;
@@ -79,36 +79,36 @@ div#comments{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Avenir;
+	font-family:Dosis;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 23px;
 	text-decoration:none;
 }
-#logout:hover, #submit:hover, #showsub:hover, #signup:hover, #loginbutton:hover {
+button:hover {
 	color:red;
 	border-color: #566963;
 }
-#logout:active, #submit:active, #showsub:active, #signup:active, #loginbutton:active {
+button:active {
 	position:relative;
 	top:1px;
 }
 
 
+
+
 #login {
 	height: 600px;
 	width: 370px;
-	
 	margin-left: auto;
 	margin-right: auto;
-	top: 50%;
-}
+	top: 50%;}
 
 #hometitle{
 	font-family: 'Dosis', sans-serif;
 	font-size: 60px;
-	font-weight: bold;
-}
+	font-weight: bold;}
+
 
 
 #backg {
@@ -153,8 +153,7 @@ div#comments{
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
-}
+  margin: auto;}
 
 
 
@@ -163,5 +162,4 @@ div#comments{
    -moz-opacity:0.2; /* For older FF versions */
    -khtml-opacity:0.2;
    opacity:0.2;
-   filter:alpha(opacity=20);
-}
+   filter:alpha(opacity=20);}
