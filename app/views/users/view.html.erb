@@ -33,10 +33,16 @@
 		<h2>Username: <%=user.name%></h2>
 		<h2>Email: <%=user.email%></h2>
 		<h3>Past Comments</h3>
-		
-		<%user.comments.each do |comment|%>
+
+		<% arr = [] %>
+		<% arr = user.comments.to_a %>
+		<% arr.reverse! %>
+
+		<% arr.each do |comment|%>
+
 		<ul style="list-style-type:none">
 			<% articles = Article.where(id: comment.article_id) %>
+
 			<% articles.each do |article| %>
 			<li>Article Title: <a href='/articles/<%=article.id%>'><%= article.title %></a></li>
 			<% end %>
