@@ -33,6 +33,8 @@
 	<% @articles.each do |article| %>
 		<div id='artimg'>
 			<a class='imglink' href='/articles/<%= article.id %>'>
+			<% article.img_url = article.img_url.gsub('.jpg','l.jpg') %>
+			<% article.img_url = article.img_url.gsub('.gif','l.gif') %>
 				<img src="<%= article.img_url %>" width="340px">
 				<div class='imgTitle'>
 					<a href='/articles/<%= article.id %>'>
