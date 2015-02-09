@@ -1,5 +1,6 @@
 #SpaceGrid
 >[@Heroku](http://secret-forest-2887.herokuapp.com/articles)
+
 > An exercise in auto-content-generation. We utilize the Reddit API to gather images from the 'Space' subreddit.
 
 ### Team Meowth
