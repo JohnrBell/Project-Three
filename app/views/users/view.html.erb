@@ -1,0 +1,46 @@
+
+<div id="backg">
+  <img src='http://i.imgur.com/0JCPxKP.jpg'>
+</div>
+
+	<div id="header">
+	<table width=100% height=100%>
+	<tr>
+		<td width=20 align="right">
+		</td>
+		<td width=50%>
+			Return to <a href='/articles'>SpaceGrid</a>
+
+			<% if session[:user_name] == 'admin' %>
+			- <a href='/pending'>See Pending Articles</a>
+			<%end%>
+		</td>
+		<td width=0% align="right">
+			
+			<form action='/sessions/destroy' method="POST">
+			<button id="logout">Log Out</button>
+			<input name='authenticity_token' value='<%=form_authenticity_token() %>' type='hidden'>
+			</form>
+
+		</td>
+		<td width=20 align="right">
+		</td>
+	</tr>
+</table>
+</div>
+
+	<div>
+		<h2>Username: <%=user.name%></h2>
+		<h2>Email: <%=user.email%></h2>
+		<h3>Past Comments</h3>
+		
+		<%user.comments.each do |comment|%>
+		<ul style="list-style-type:none">
+			<% articles = Article.where(id: comment.article_id) %>
+			<% articles.each do |article| %>
+			<li>Article Title: <a href='/articles/<%=article.id%>'><%= article.title %></a></li>
+			<% end %>
+			<li>You commented, "<%=comment.text%>"</li>
+		</ul>
+		<%end%>
+	</div>

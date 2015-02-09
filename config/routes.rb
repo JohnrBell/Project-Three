@@ -5,6 +5,7 @@ root 'users#index'
 
 get '/users/new' => 'users#new'                                     #gets 'create new user' view
 post '/users/create' => 'users#create'                              #post to create a new user
+get '/users/:id' => 'users#view'
 
 post '/sessions/create' => 'sessions#create'                         #post to start a session at login 
 post '/sessions/destroy' => 'sessions#destroy'                       #post to end a session at logout
