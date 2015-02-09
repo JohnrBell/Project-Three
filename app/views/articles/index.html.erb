@@ -8,7 +8,7 @@
 		<td width=20 align="right">
 		</td>
 		<td width=50%>
-			Welcome to <a href='/articles'>SpaceGrid</a>, <%= session[:user_name] %>
+			Welcome to <a href='/articles'>SpaceGrid</a>, <a href='/users/<%=session[:user_id]%>'><%= session[:user_name] %></a>
 
 			<% if session[:user_name] == 'admin' %>
 			- <a href='/pending'>See Pending Articles</a>
