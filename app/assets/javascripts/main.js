@@ -10,7 +10,7 @@ window.onload = function(){
 			type: 'GET',
 			dataType: 'json'
 		}).done(function(results){
-			setTimeout(function(){
+
 				results['data']['children'].forEach(function(post) {	//runs through each result returned 
 	   			if (post['data']['domain'] == 'i.imgur.com'){ //checks if the post is that of an image
 	   				article = {title: post['data']['title'], img_url: post['data']['url']}
@@ -21,6 +21,8 @@ window.onload = function(){
 						})//close ajax call
 	   			}//close if 
 			  })//close .for each
+			
+			setTimeout(function(){
 			  window.location.replace('/pending')
 		  },5000)//close setimeout
 		})//close .done
