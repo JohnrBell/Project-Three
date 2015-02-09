@@ -1,5 +1,7 @@
 #SpaceGrid
-## A Reddit Generated, Automatic Content Gathering System
+> An exercise in auto-content-generation. We utilize the Reddit API to gather images from the 'Space' subreddit.
+
+>[@Heroku](http://secret-forest-2887.herokuapp.com/articles)
 
 ### Team Meowth
 
@@ -26,8 +28,9 @@
 ###[Loading Ring](http://codepen.io/CasperPas/pen/erJKE)
 >Simple CSS to make the loading ring animation.
 
+##Team Meowth Trello Board
+>https://trello.com/b/4PvAmoIH/team-meowth
 
-###[Team Meowth Trello Board](https://trello.com/b/4PvAmoIH/team-meowth)
->Artifacts | Wireframes | ERDs
+##Artifacts | Wireframes | ERDs
 
 ![](https://trello-attachments.s3.amazonaws.com/54d27db4731b0398537f5efc/6650x2990/64e24c69db79ba5fe90f1321f4d6a6fb/2015-02-04_16.01.51.jpg)

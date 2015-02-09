@@ -32,11 +32,6 @@ a:visited{
     color: #CCCCCC;
     text-decoration: none;}
 
-#artimg img{
-	margin-left: 10px;
-	margin-bottom: 5px}
-
-
 div#comments{
 	padding: 20px;
 	background-color: rgba(0,0,0,.5);
@@ -53,7 +48,6 @@ div#comments{
 	border-bottom: 1px red solid}
 
 
-
 #subnameandtime{
 	font-size: .80em;
 	font-style: italic;
@@ -64,7 +58,6 @@ div#comments{
 #subcomment{
 	margin-left: 40px;
 	border-bottom: 1px red solid}
-
 
 
 #header{
@@ -84,7 +77,6 @@ div#comments{
 #header a:visited{
 	color: #CCCCCC;
 	text-decoration: none;}
-
 
 
 button {
@@ -107,8 +99,6 @@ button:hover {
 button:active {
 	position:relative;
 	top:1px;}
-
-
 
 
 #login {
@@ -181,8 +171,6 @@ textarea {
   margin: auto;}
 
 
-
-
 .imgTitle{
 	position: absolute;
 	top: 10%;
@@ -224,7 +212,9 @@ textarea {
 	color: #000000;
 	text-decoration: none;}
 
-
+#artimg img{
+    margin-left: 10px;
+    margin-bottom: 5px}
 
 #artimg img{
     border-radius: 10px;
@@ -234,15 +224,18 @@ textarea {
     box-shadow: 0px 0px 10px #000000;
     border: rgba(0,0,0,.4) 2px solid;}
 
+
+
+
+
+/*DIV FOR THE FLOATING STARS ON THE INDEX/LANDING PAGE*/
+
 canvas {
-	display: block;
-	-moz-opacity:0.2; /* For older FF versions */
-	-khtml-opacity:0.2;
-	opacity:0.2;
-	filter:alpha(opacity=20);}
-
-
-
+    display: block;
+    -moz-opacity:0.2; /* For older FF versions */
+    -khtml-opacity:0.2;
+    opacity:0.2;
+    filter:alpha(opacity=20);}
 
 
 
@@ -257,25 +250,18 @@ canvas {
 	height:100%;
 	z-index:999;}
 
-
 div.wrap {
     width: 100%;
     margin: 0 auto;
-    padding-top: 20%;
-}
-
+    padding-top: 20%;}
 section {
     display: block;
-    position: relative;
-}
-
+    position: relative;}
 ul.rotate_wrapper {
     position: relative;
     width: 100px;
     height: 100px;
-    list-style: none;
-}
-
+    list-style: none;}
 ul.rotate_wrapper li.rotate_item {
     width: 100%;
     height: 100%;
@@ -289,8 +275,7 @@ ul.rotate_wrapper li.rotate_item {
     text-indent: -9999px;
     display: block;
     position: absolute;
-    border: none;
-}
+    border: none;}
 ul.rotate_wrapper li.rotate_item span {
     background: #FFFFFF;
     bottom: 0px;
@@ -303,8 +288,7 @@ ul.rotate_wrapper li.rotate_item span {
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-}
+    -o-border-radius: 4px;}
 
 /* CSS3 Animations */
 ul.rotate_wrapper li.rotate_item {
