@@ -1,4 +1,5 @@
-#SpaceGrid
+![](http://i.imgur.com/dsv9UHg.jpg)
+
 > An exercise in auto-content-generation. We utilize the Reddit API to gather images from the 'Space' subreddit.
 
 >[@Heroku](http://secret-forest-2887.herokuapp.com/articles)
@@ -34,3 +35,4 @@
 ##Artifacts | Wireframes | ERDs
 
 ![](https://trello-attachments.s3.amazonaws.com/54d27db4731b0398537f5efc/6650x2990/64e24c69db79ba5fe90f1321f4d6a6fb/2015-02-04_16.01.51.jpg)
+
