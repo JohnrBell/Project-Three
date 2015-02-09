@@ -28,7 +28,8 @@
 	<br><br>
 	<div id="comments">
 		<% comments.each do |comment| %>
-			<p id='nameandtime'><%= comment.user.name %> - <%= comment.created_at %></p>
+			
+			<p id='nameandtime'><%= comment.user.name %> - <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></p>
 			<p id='commenttext'><%= comment.text %></p>
 			<br>
 		<% end %>
