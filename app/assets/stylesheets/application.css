@@ -126,23 +126,23 @@ button:active {
 
 
 #backg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  z-index: -1;
-  opacity: .4}
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    opacity: .4}
 
 #backg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;}
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;}
 
 
 .login { 
@@ -186,9 +186,8 @@ textarea {
 .imgTitle{
 	position: absolute;
 	top: 10%;
-
 	width: 250px;
-	margin-left: 15px;
+	margin-left: 12px;
 	margin-bottom: -20px;
 	padding: 5px;
 	border-bottom: rgba(0,0,0,.5) 2px solid;
@@ -199,40 +198,34 @@ textarea {
     visibility: hidden}
 .imgTitle:hover{
 	background-color: rgba(255,255,255,1);
-	border-right: rgba(200,0,0,1) 5px solid;
-}
+	border-right: rgba(200,0,0,1) 5px solid;}
 #artimg:hover .imgTitle{
 	background-color: rgba(255,255,255,1);
 	border-right: rgba(200,0,0,1) 5px solid;
-    visibility: visible;
-}
+    visibility: visible;}
 
 .imgTitle a{
 	color: #000000;
-	text-decoration: none;
-}
+	text-decoration: none;}
 .imgTitle a:hover{
 	color: #000000;
-	text-decoration: none;
-}
+	text-decoration: none;}
 .imgTitle a:visited{
 	color: #000000;
-	text-decoration: none;
-}
+	text-decoration: none;}
 .imgTitle a:active{
 	color: #000000;
-	text-decoration: none;
-}
+	text-decoration: none;}
 
 
 
 #artimg img{
-	border-radius: 10px;
-	box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  border: rgba(255,255,255,.4) 4px solid;
-}
+    border-radius: 10px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-shadow: 2px 0px 10px #000000;
+    border: rgba(255,255,255,.4) 2px solid;}
 
 canvas {
 	display: block;
