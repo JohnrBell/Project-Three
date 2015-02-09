@@ -11,7 +11,14 @@ class PArticlesController < ApplicationController
 	end
 
 	def create
+		all_articles=Article.all
+		all_pending_articles=P_Article.all
+		article_title_array=[]
+		all_articles.each {|i|article_title_array<<i.title}
+		all_pending_articles.each {|i|article_title_array<<i.title}
+		unless article_title_array.include? params[:title]
 		P_Article.create({title: params[:title], img_url: params[:img_url]})
+		end
 		render :nothing => true
 	end
 
