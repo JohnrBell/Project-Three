@@ -61,13 +61,13 @@ div#comments{
 
 
 #header{
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.4);
 	height: 70px;
 	font-family: Dosis;
 	font-weight: bold;
 	font-size: 1.5em;
-	margin-bottom: 10px;
-	 box-shadow: 0px 0px 5px #000000;}
+	margin-bottom: 15px;
+	 box-shadow: 0px 0px 15px #000000;}
 #header a{
 	color: #CCCCCC;
 	text-decoration: underline;}
