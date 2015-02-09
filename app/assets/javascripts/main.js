@@ -29,10 +29,9 @@ window.onload = function(){
 
 	$('body').on('click', '#yes' ,function(event){ //when you click the yes, keep this pending button
 		idtokill = {id: this.getAttribute("data-pic-id")}
-		title = this.parentElement.children[3].Attribute('value')
+		title = this.parentElement.children[3].getAttribute('value')
 		img_url = this.parentElement.children[4].getAttribute('value')
 		whattopost = {title: title, img_url: img_url}	
-		
 		this.parentElement.remove()
 		$.ajax({	//ajax post to add pending article to the article database...
 			url: 'articles/create',
