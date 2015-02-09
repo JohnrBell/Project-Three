@@ -1,8 +1,8 @@
 console.log('Main.js loaded!')
 
 window.onload = function(){
-
 	$('#getredditposts').on('click', function(event){ //when you click the get reddit posts button
+		$('#loading')[0].style.display = 'block'
 		timeframe = $('#timeframe').val().toLowerCase()
 		url = ('http://www.reddit.com/r/space/top.json?t='+timeframe)
 		$.ajax({	//ajax request to reddit api to get top space posts from today
@@ -10,24 +10,26 @@ window.onload = function(){
 			type: 'GET',
 			dataType: 'json'
 		}).done(function(results){
-			results['data']['children'].forEach(function(post) {	//runs through each result returned 
-   			if (post['data']['domain'] == 'i.imgur.com'){ //checks if the post is that of an image
-   				article = {title: post['data']['title'], img_url: post['data']['url']}
-   				$.ajax({	//ajax post to add pending articles to the database...
-						url: '/pending/create',
-						type: 'POST',
-						data: article
-					})//close ajax call
-   			}//close if 
-		  })//close .for each
-		  location.reload();
+			setTimeout(function(){
+				results['data']['children'].forEach(function(post) {	//runs through each result returned 
+	   			if (post['data']['domain'] == 'i.imgur.com'){ //checks if the post is that of an image
+	   				article = {title: post['data']['title'], img_url: post['data']['url']}
+	   				$.ajax({	//ajax post to add pending articles to the database...
+							url: '/pending/create',
+							type: 'POST',
+							data: article
+						})//close ajax call
+	   			}//close if 
+			  })//close .for each
+			  location.reload();
+		  },5000)//close setimeout
 		})//close .done
 	})//close on click function
 
 
 	$('body').on('click', '#yes' ,function(event){ //when you click the yes, keep this pending button
 		idtokill = {id: this.getAttribute("data-pic-id")}
-		title = this.parentElement.children[3].getAttribute('value')
+		title = this.parentElement.children[3].Attribute('value')
 		img_url = this.parentElement.children[4].getAttribute('value')
 		whattopost = {title: title, img_url: img_url}	
 		
