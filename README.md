@@ -1,7 +1,6 @@
 #SpaceGrid
 >[@Heroku](http://secret-forest-2887.herokuapp.com/articles)
-
-## A Reddit Generated, Automatic Content Gathering System
+> An exercise in auto-content-generation. We utilize the Reddit API to gather images from the 'Space' subreddit.
 
 ### Team Meowth
 
