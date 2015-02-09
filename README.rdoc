@@ -1,43 +1,33 @@
+#SpaceGrid
+## A Reddit Generated, Automatic Content Gathering System
 
-== Description
+### Team Meowth
 
-	An Automatic Content Gathering System, Utilizing Reddit's API.
-
-
-== Team
-
-	John Bell
-
-	Mina Talai
-
-	Umer Dar
-
-	Tania Turzer
+* John Bell
+* Mina Talai
+* Umer Dar
+* Tania Turzer
 
 
-== Technologies User
+## Technologies Used
 
-masonry layout - http://masonry.desandro.com/index.html
+### [Masonry layout](http://masonry.desandro.com/index.html)
+> Allows the free flowing layout which makes our website responsive and pretty.
 
-	-allows the free flowing layout which is responsive and damn pretty. 
+### [imagesloaded](http://imagesloaded.desandro.com/)
+>Allows you to write javascript that executes AFTER all images have loaded into the page
 
-imagesloader - http://imagesloaded.desandro.com/
+### [Reddit API](www.reddit.com/dev/api)
+>Reddit's API, specifically the Space category. We filter the results and reject those that are not hosted by [Imgur](http://imgur.com/)
 
-	-allows you to write javascript that executs AFTER all images have loaded into the page
+###[Star Particles](http://codepen.io/apsolut/pen/EhmeL)
+>Used this codepen to build the starry sky on the index
 
-reddit api - www.reddit.com/dev/api
-
-	-reddit's api... simple enough
-
-star particles - http://codepen.io/apsolut/pen/EhmeL
-
-	-used this codepen to build the stary sky on the index
-
-loading ring - http://codepen.io/CasperPas/pen/erJKE
-
-	-simple css to make the loading ring animation. 
+###[Loading Ring](http://codepen.io/CasperPas/pen/erJKE)
+>Simple CSS to make the loading ring animation.
 
 
-== Our Trello (Contains Artifacts & Wireframes & ERDs)
+###[Team Meowth Trello Board](https://trello.com/b/4PvAmoIH/team-meowth)
+>Artifacts | Wireframes | ERDs
 
-https://trello.com/b/4PvAmoIH/team-meowth
+![](https://trello-attachments.s3.amazonaws.com/54d27db4731b0398537f5efc/6650x2990/64e24c69db79ba5fe90f1321f4d6a6fb/2015-02-04_16.01.51.jpg)
