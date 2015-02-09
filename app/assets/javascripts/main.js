@@ -21,7 +21,7 @@ window.onload = function(){
 						})//close ajax call
 	   			}//close if 
 			  })//close .for each
-			  location.reload();
+			  window.location.replace('/pending')
 		  },5000)//close setimeout
 		})//close .done
 	})//close on click function
